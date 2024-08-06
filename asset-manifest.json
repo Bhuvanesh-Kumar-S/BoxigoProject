@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/boxigo-project/static/css/main.104be349.css",
+    "main.js": "/boxigo-project/static/js/main.550ff98c.js",
+    "index.html": "/boxigo-project/index.html",
+    "main.104be349.css.map": "/boxigo-project/static/css/main.104be349.css.map",
+    "main.550ff98c.js.map": "/boxigo-project/static/js/main.550ff98c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.104be349.css",
+    "static/js/main.550ff98c.js"
+  ]
+}
