@@ -1,0 +1,143 @@
+/* Boxigo.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.move-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.move-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.move-info {
+  flex: 1;
+}
+
+.toggle-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+
+.move-details {
+  margin-top: 10px;
+}
+
+/* .inventory-list, .category-list {
+  list-style: none;
+  padding: 0;
+} */
+.inventory-list {
+  list-style-type: disc; /* Add bullet points to the inventory list */
+  padding-left: 20px; /* Adjust padding to align the bullet points */
+}
+
+/* .inventory-item {
+  margin-bottom: 10px;
+} */
+
+.inventory-item {
+  list-style-type: none; /* Remove bullet points from inventory items themselves */
+  margin-bottom: 10px;
+}
+
+.inventory-header {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  position: relative; /* Add for hover effect */
+}
+
+.inventory-header:hover {
+  background-color: #ddd;
+}
+
+.inventory-header::after {
+  content: ">";
+  position: absolute;
+  right: 10px;
+  transition: transform 0.3s;
+}
+
+.inventory-header:hover::after {
+  transform: translateX(5px);
+}
+
+.inventory-item.expanded .inventory-header {
+  background-color: #d1e7ff;
+  border-left: 4px solid #007bff;
+}
+
+.category-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  margin-top: 10px;
+  padding-left: 15px;
+  border-left: 2px solid #ddd;
+}
+
+.inventory-item.expanded .category-list {
+  max-height: 500px; /* Adjust as needed */
+}
+
+.category-item {
+  background-color: #f1f1f1;
+  padding: 5px;
+  border-radius: 3px;
+  margin-top: 3px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.inventory-item.expanded .category-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+}
